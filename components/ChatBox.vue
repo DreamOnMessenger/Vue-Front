@@ -19,6 +19,7 @@
       class="d-flex align-items-center Dark overflow-auto vh-100 flex-fil"
     >
       <Messege />
+      <Messege type="Send" />
     </b-list-group>
     <b-list-group-item class="d-flex align-items-center Dark">
       <b-form-textarea

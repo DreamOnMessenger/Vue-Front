@@ -11,16 +11,19 @@
         <div>
           Texsjfdskjfdklsjfk sdfjskljfksdj fk ksjkj fskj kj ksjkf slflksl
           jjfksdf smfksh sh jhsh jdh jhshd h sdh js hjsh fjhsj s jsjd ksk k sk
-          ksjk jksdk t
+          ksjk jksdk t sdfkdslfklsk dflksldfk;sd fkdslfklskd flksldfksdf
+          sdlfskdflksdlfksldfklsdf sdlfskdflks dlfksldfklsdffs dfdsfsf dsfsdfsdf
         </div>
       </div>
     </b-list-group-item>
-    <b-list-group-item v-else class="Dark">
-      <b-avatar
-        size="2rem"
-        src="https://i.pravatar.cc/300"
-        class="mr-auto"
-      ></b-avatar>
+    <b-list-group-item v-else class="Dark d-flex rtl">
+      <div class="mt-2 ml-auto Messege Send-Dark">
+        <div>
+          Texsjfdskjfdklsjfk sdfjskljfksdj fk ksjkj fskj kj ksjkf slflksl
+          jjfksdf smfksh sh jhsh jdh jhshd h sdh js hjsh fjhsj s jsjd ksk k sk
+          ksjk jksdk t
+        </div>
+      </div>
     </b-list-group-item>
   </div>
 </template>
@@ -42,17 +45,22 @@ export default {
   border: 0;
 }
 .Send-Dark {
+  border-radius: 10px;
   background-color: #fff;
   color: rgb(0, 0, 0);
+  border-top-right-radius: 0;
 }
 .Recieved-Dark {
+  border-radius: 10px;
   background-color: #53586f;
   color: #fff;
+  border-top-left-radius: 0;
 }
 .Messege {
-  padding: 6px;
-  border-radius: 10px;
-  border-top-left-radius: 0;
-  max-width: 75%;
+  padding: 10px;
+  max-width: 70%;
+}
+.rtl {
+  direction: rtl;
 }
 </style>
