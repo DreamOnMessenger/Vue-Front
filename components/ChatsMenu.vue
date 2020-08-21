@@ -1,19 +1,17 @@
 <template>
   <div class="Dark body" style="max-width: 400px;">
+    <!-- 
+
     <b-list-group-item
       class="d-flex align-items-center Nav-Dark p-0 pl-2 navbar-menu"
       style="max-width: 400px;"
     >
-      <b-avatar
-        size="2rem"
-        src="https://i.pravatar.cc/300"
-        class="mr-auto"
-      ></b-avatar>
-      <div class="DOM-title mb-2 mt-2 mr-auto">DreamOnMessenger</div>
+      
+      <div class="DOM-title mb-2 mt-2 mr-auto"></div>
       <b-icon
-        v-b-toggle.ToolBox
+        
         icon="list"
-        font-scale="2"
+        
         class="mr-auto icon-color ml-4"
       ></b-icon>
     </b-list-group-item>
@@ -22,8 +20,37 @@
       class="Nav-Dark navbar-menu"
       style="max-width: 400px;"
     >
-      <ToolBox :profile="profile" />
-    </b-collapse>
+      
+    </b-collapse> -->
+
+    <b-navbar
+      toggleable
+      type="dark"
+      is-nav
+      sticky="true"
+      class="d-flex align-items-center Nav-Dark p-0 pl-2"
+    >
+      <b-avatar
+        size="2rem"
+        src="https://i.pravatar.cc/300"
+        class="mr-auto"
+      ></b-avatar>
+      <b-navbar-brand class="DOM-title mb-2 mt-2 mr-auto"
+        >DreamOnMessenger</b-navbar-brand
+      >
+      <b-icon
+        v-b-toggle.ToolBox
+        icon="list"
+        class="mr-auto icon-color ml-4"
+        font-scale="2.5"
+      ></b-icon>
+      <b-collapse id="ToolBox" class="w-100 ml-0">
+        <b-navbar-nav class="w-100">
+          <ToolBox />
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
+
     <b-list-group
       class="Nav-Dark overflow-auto flex-fil chat-cards"
       style="max-width: 400px;"

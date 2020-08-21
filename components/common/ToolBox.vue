@@ -1,38 +1,31 @@
 <template>
   <div class="toolbox">
-    <b-list-group-item
-      class="d-flex align-items-center Nav-Dark"
-      style="max-width: 400px;"
-    >
-      <b-icon
-        v-b-toggle.ToolBox
-        icon="arrow-left"
-        font-scale="2"
-        class="mr-auto icon-color ml-0"
-      ></b-icon>
-      <b-icon
-        v-b-toggle.profile
-        icon="file-person"
-        font-scale="2"
-        class="mr-auto icon-color ml-4"
-      ></b-icon>
-      <b-icon
-        v-b-toggle.setting
-        icon="gear"
-        font-scale="2"
-        class="mr-auto icon-color ml-4"
-      ></b-icon>
-      <b-icon
-        icon="search"
-        font-scale="2"
-        class="mr-auto icon-color ml-4"
-      ></b-icon>
-      <b-icon
-        icon="plus-circle"
-        font-scale="2"
-        class="mr-auto icon-color ml-4"
-      ></b-icon>
-    </b-list-group-item>
+    <b-navbar-nav class="Nav-Dark">
+      <b-nav-item class="w-100 px-4 d-flex align-items-center">
+        <b-icon
+          v-b-toggle.profile
+          icon="file-person"
+          font-scale="2.5"
+          class="icon-color mr-2 ml-4"
+        ></b-icon>
+        <b-icon
+          v-b-toggle.setting
+          icon="gear"
+          font-scale="2.5"
+          class="icon-color mr-2 ml-3"
+        ></b-icon>
+        <b-icon
+          icon="search"
+          font-scale="2.5"
+          class="icon-color mr-2 ml-3"
+        ></b-icon>
+        <b-icon
+          icon="plus-circle"
+          font-scale="2.5"
+          class="icon-color ml-3 mr-4"
+        ></b-icon>
+      </b-nav-item>
+    </b-navbar-nav>
   </div>
 </template>
 

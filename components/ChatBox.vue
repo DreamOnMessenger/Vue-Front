@@ -1,23 +1,23 @@
 <template>
   <div class="Dark body">
-    <b-list-group-item
-      class="d-flex align-items-center Nav-Dark p-2 pl-1 mb-3 chat-title"
-    >
+    <b-navbar type="dark" class="Nav-Dark p-2 pl-1 mb-3 pt-3" fixed="top">
       <b-icon icon="arrow-left" font-scale="2" class="mr-2 icon-color"></b-icon>
-      <b-avatar
-        size="2rem"
-        src="https://i.pravatar.cc/300"
-        class="mr-2"
-      ></b-avatar>
-      <h3 class="Text-Dark">ChatName</h3>
+      <b-navbar-nav>
+        <b-avatar
+          size="2rem"
+          src="https://i.pravatar.cc/300"
+          class="mr-2"
+        ></b-avatar>
+        <h3 class="Text-Dark">ChatName</h3>
+      </b-navbar-nav>
       <b-icon
         icon="plus-circle"
         font-scale="2"
         class="ml-auto icon-color"
       ></b-icon>
-    </b-list-group-item>
+    </b-navbar>
     <b-list-group
-      class="d-flex align-items-center Dark overflow-auto chat-box flex-fil"
+      class="d-flex align-items-center Dark overflow-auto chat-box flex-fil pt-2"
     >
       <Messege />
       <Messege type="Send" />
@@ -32,9 +32,8 @@
       <Messege />
       <Messege />
     </b-list-group>
-    <b-list-group-item
-      class="d-flex align-items-center Dark pr-2 pb-auto pt-0 chat-input"
-    >
+
+    <b-navbar type="dark" class="Dark" fixed="bottom">
       <b-form-textarea
         v-model="text"
         size="sm"
@@ -48,7 +47,7 @@
         rotate="270"
         :class="[text.length > 0 ? 'send-btn-active' : '']"
       ></b-icon>
-    </b-list-group-item>
+    </b-navbar>
   </div>
 </template>
 
@@ -111,23 +110,11 @@ export default {
   background-color: #32395d;
   color: #fff;
 }
-.chat-title {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  height: 9vh;
-}
 .chat-box {
   position: fixed;
   top: 9vh;
-  bottom: 13vh;
+  bottom: 9.2vh;
   height: auto;
-}
-.chat-input {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  height: 13vh;
 }
 .body {
   height: 100vh;
