@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-list-group-item class="d-flex align-items-center Dark">
+    <b-list-group-item class="d-flex align-items-center Dark p-2 pr-3">
       <b-avatar
         size="lg"
         :badge="badge"

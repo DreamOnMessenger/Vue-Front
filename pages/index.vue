@@ -3,8 +3,12 @@
     <ChatsMenu />
     <ChatBox />
     <Login />
-    <Profile />
-    <Settings />
+    <b-sidebar id="profile" no-header shadow width="360px">
+      <Profile />
+    </b-sidebar>
+    <b-sidebar id="setting" no-header shadow width="360px">
+      <Settings />
+    </b-sidebar>
   </div>
 </template>
 
@@ -16,5 +20,14 @@ import Profile from '~/components/Profile.vue';
 import Settings from '~/components/Settings.vue';
 export default {
   components: { ChatBox, ChatsMenu, Login, Profile, Settings },
+  data() {
+    return {
+      chatmenu: true,
+      profile: false,
+      setting: false,
+      login: false,
+      chatbox: false,
+    };
+  },
 };
 </script>

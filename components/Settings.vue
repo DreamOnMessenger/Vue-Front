@@ -1,7 +1,14 @@
 <template>
   <div class="Dark" style="max-width: 400px;">
-    <h1 style="background-color: #fff;">Settings</h1>
-    <h1 class="DOM-title pl-2">Settings</h1>
+    <b-row class="pl-3 pt-3">
+      <b-icon
+        v-b-toggle.setting
+        icon="arrow-left"
+        font-scale="2"
+        class="mr-2 icon-color"
+      ></b-icon>
+      <h1 class="DOM-title pl-2">Settings</h1>
+    </b-row>
     <b-list-group
       class="overflow-auto vh-100 flex-fil mt-3"
       style="max-width: 400px;"

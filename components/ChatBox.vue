@@ -1,7 +1,8 @@
 <template>
-  <div>
-    <h1>ChatBox</h1>
-    <b-list-group-item class="d-flex align-items-center Nav-Dark">
+  <div class="Dark body">
+    <b-list-group-item
+      class="d-flex align-items-center Nav-Dark p-2 pl-1 mb-3 chat-title"
+    >
       <b-icon icon="arrow-left" font-scale="2" class="mr-2 icon-color"></b-icon>
       <b-avatar
         size="2rem"
@@ -10,28 +11,42 @@
       ></b-avatar>
       <h3 class="Text-Dark">ChatName</h3>
       <b-icon
-        icon="plus-circle-fill"
+        icon="plus-circle"
         font-scale="2"
         class="ml-auto icon-color"
       ></b-icon>
     </b-list-group-item>
     <b-list-group
-      class="d-flex align-items-center Dark overflow-auto vh-100 flex-fil"
+      class="d-flex align-items-center Dark overflow-auto chat-box flex-fil"
     >
       <Messege />
       <Messege type="Send" />
+      <Messege type="Send" />
+      <Messege />
+      <Messege type="Send" />
+      <Messege type="Send" />
+      <Messege />
+      <Messege type="Send" />
+      <Messege type="Send" />
+      <Messege type="Send" />
+      <Messege />
+      <Messege />
     </b-list-group>
-    <b-list-group-item class="d-flex align-items-center Dark">
+    <b-list-group-item
+      class="d-flex align-items-center Dark pr-2 pb-auto pt-0 chat-input"
+    >
       <b-form-textarea
+        v-model="text"
         size="sm"
         placeholder="Message"
         class="Input-Dark"
       ></b-form-textarea>
       <b-icon
         icon="gem"
-        font-scale="2"
-        class="icon-color ml-4"
+        font-scale="3"
+        class="send-btn ml-2"
         rotate="270"
+        :class="[text.length > 0 ? 'send-btn-active' : '']"
       ></b-icon>
     </b-list-group-item>
   </div>
@@ -41,10 +56,19 @@
 import Messege from '~/components/common/Messege.vue';
 export default {
   components: { Messege },
+  props: {
+    text: {
+      type: String,
+      default: '',
+    },
+  },
 };
 </script>
 
 <style scoped>
+.icon-color {
+  color: #f85252;
+}
 .Nav-Dark {
   background-color: #20253b;
   border-bottom: 5px solid #f85252;
@@ -56,14 +80,56 @@ export default {
   color: #f85252;
   font-size: x-large;
 }
-.icon-color {
+.send-btn {
+  width: 50px;
+  padding: 0;
+  border-radius: 50px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  transition: all 0.3;
   color: #f85252;
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+
+.send-btn-active {
+  color: #20253b;
+  background-color: #f85252;
+  border: 2px solid #f85252;
+}
+.send-btn-active:hover {
+  color: #f85252;
+  background-color: transparent;
+  border: 2px solid #f85252;
 }
 .Text-Dark {
   color: #fff;
 }
 .Input-Dark {
+  padding-left: 15px;
+  border-radius: 10px;
   background-color: #32395d;
   color: #fff;
+}
+.chat-title {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 9vh;
+}
+.chat-box {
+  position: fixed;
+  top: 9vh;
+  bottom: 13vh;
+  height: auto;
+}
+.chat-input {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  height: 13vh;
+}
+.body {
+  height: 100vh;
 }
 </style>

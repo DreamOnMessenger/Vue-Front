@@ -1,8 +1,7 @@
 <template>
-  <div class="Dark" style="max-width: 400px;">
-    <h1 style="background-color: #fff;">ChatsMenu</h1>
+  <div class="Dark body" style="max-width: 400px;">
     <b-list-group-item
-      class="d-flex align-items-center Nav-Dark"
+      class="d-flex align-items-center Nav-Dark p-0 pl-2 navbar-menu"
       style="max-width: 400px;"
     >
       <b-avatar
@@ -18,11 +17,15 @@
         class="mr-auto icon-color ml-4"
       ></b-icon>
     </b-list-group-item>
-    <b-collapse id="ToolBox" class="Nav-Dark">
-      <ToolBox />
+    <b-collapse
+      id="ToolBox"
+      class="Nav-Dark navbar-menu"
+      style="max-width: 400px;"
+    >
+      <ToolBox :profile="profile" />
     </b-collapse>
     <b-list-group
-      class="overflow-auto vh-100 flex-fil"
+      class="Nav-Dark overflow-auto flex-fil chat-cards"
       style="max-width: 400px;"
     >
       <ChatCard />
@@ -42,6 +45,7 @@ import ChatCard from '~/components/common/ChatCard.vue';
 import ToolBox from '~/components/common/ToolBox.vue';
 export default {
   components: { ChatCard, ToolBox },
+  props: {},
   data() {
     return {
       chats: [
@@ -133,6 +137,27 @@ export default {
   font-size: x-large;
 }
 .icon-color {
+  border-radius: 5px;
+  border: 2.5px solid transparent;
   color: #f85252;
+}
+.icon-color:hover {
+  background-color: #f85252;
+  color: #2a304d;
+}
+.navbar-menu {
+  position: fixed;
+  top: 0;
+  height: 9vh;
+  width: 100%;
+}
+.chat-cards {
+  position: fixed;
+  top: 9vh;
+  height: 91vh;
+  width: 100%;
+}
+.body {
+  height: 100vh;
 }
 </style>

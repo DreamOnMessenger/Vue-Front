@@ -1,6 +1,5 @@
 <template>
   <div class="Dark vh-100">
-    <h1 style="background-color: #fff;">Login</h1>
     <div class="container">
       <b-form class="text-center">
         <h4 class="w-100 Text-Dark">Login</h4>

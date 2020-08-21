@@ -1,6 +1,6 @@
 <template>
   <div class="w-100 Dark">
-    <b-list-group-item v-if="type == 'Recieved'" class="Dark d-flex">
+    <b-list-group-item v-if="type == 'Recieved'" class="Dark d-flex m-0">
       <b-avatar
         size="2rem"
         src="https://i.pravatar.cc/300"
@@ -49,15 +49,17 @@ export default {
   background-color: #fff;
   color: rgb(0, 0, 0);
   border-top-right-radius: 0;
+  border-bottom-right-radius: 20px;
 }
 .Recieved-Dark {
   border-radius: 10px;
   background-color: #53586f;
   color: #fff;
   border-top-left-radius: 0;
+  border-bottom-left-radius: 20px;
 }
 .Messege {
-  padding: 10px;
+  padding: 15px;
   max-width: 70%;
 }
 .rtl {
