@@ -1,28 +1,5 @@
 <template>
   <div class="Dark body" style="max-width: 400px;">
-    <!-- 
-
-    <b-list-group-item
-      class="d-flex align-items-center Nav-Dark p-0 pl-2 navbar-menu"
-      style="max-width: 400px;"
-    >
-      
-      <div class="DOM-title mb-2 mt-2 mr-auto"></div>
-      <b-icon
-        
-        icon="list"
-        
-        class="mr-auto icon-color ml-4"
-      ></b-icon>
-    </b-list-group-item>
-    <b-collapse
-      id="ToolBox"
-      class="Nav-Dark navbar-menu"
-      style="max-width: 400px;"
-    >
-      
-    </b-collapse> -->
-
     <b-navbar
       toggleable
       type="dark"
