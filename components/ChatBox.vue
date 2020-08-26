@@ -1,6 +1,10 @@
 <template>
   <div class="Dark body">
-    <b-navbar type="dark" class="Nav-Dark p-2 pl-1 mb-3 pt-3" fixed="top">
+    <b-navbar
+      type="dark"
+      fixed="top"
+      class="Nav-Dark p-2 pl-1 mb-3 pt-3 navbar top-bar"
+    >
       <b-icon icon="arrow-left" font-scale="2" class="mr-2 icon-color"></b-icon>
       <b-navbar-nav>
         <b-avatar
@@ -17,7 +21,7 @@
       ></b-icon>
     </b-navbar>
     <b-list-group
-      class="d-flex align-items-center Dark overflow-auto chat-box flex-fil pt-2"
+      class="d-flex align-items-center Dark chat-box flex-fil pt-2 navbar"
     >
       <Messege />
       <Messege type="Send" />
@@ -33,7 +37,7 @@
       <Messege />
     </b-list-group>
 
-    <b-navbar type="dark" class="Dark" fixed="bottom">
+    <b-navbar type="dark" class="Dark navbar bottom-bar" fixed="bottom">
       <b-form-textarea
         v-model="text"
         size="sm"
@@ -91,16 +95,6 @@ export default {
   border: 2px solid transparent;
 }
 
-.send-btn-active {
-  color: #20253b;
-  background-color: #f85252;
-  border: 2px solid #f85252;
-}
-.send-btn-active:hover {
-  color: #f85252;
-  background-color: transparent;
-  border: 2px solid #f85252;
-}
 .Text-Dark {
   color: #fff;
 }
@@ -115,8 +109,20 @@ export default {
   top: 9vh;
   bottom: 9.2vh;
   height: auto;
+  overflow-y: auto;
 }
 .body {
   height: 100vh;
+}
+.navbar {
+  width: calc(100% - 400px);
+  left: 400px;
+  right: 0;
+}
+.top-bar {
+  height: 9vh;
+}
+.bottom-bar {
+  height: 9.2vh;
 }
 </style>
