@@ -1,5 +1,5 @@
 <template>
-  <div class="Dark" style="max-width: 400px;">
+  <div class="Dark">
     <b-row class="pl-3 pt-3">
       <b-icon
         v-b-toggle.profile

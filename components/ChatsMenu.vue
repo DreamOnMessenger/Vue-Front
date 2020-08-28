@@ -4,8 +4,8 @@
       toggleable
       type="dark"
       is-nav
-      sticky="true"
-      class="d-flex align-items-center Nav-Dark p-0 pl-2"
+      fixed="top"
+      class="d-flex align-items-center Nav-Dark p-0 pl-2 navbar-menu mb-0"
     >
       <b-avatar
         size="2rem"
@@ -29,7 +29,7 @@
     </b-navbar>
 
     <b-list-group
-      class="Nav-Dark overflow-auto flex-fil chat-cards"
+      class="Nav-Dark overflow-auto flex-fil chat-cards mt-0"
       style="max-width: 400px;"
     >
       <ChatCard />
@@ -123,6 +123,48 @@ export default {
           text: 'hello',
           time: '2 min',
         },
+        {
+          username: 'mahdi',
+          id: '1234',
+          badge: '3',
+          text: 'hello',
+          time: '2 min',
+        },
+        {
+          username: 'mahdi',
+          id: '1234',
+          badge: '3',
+          text: 'hello',
+          time: '2 min',
+        },
+        {
+          username: 'mahdi',
+          id: '1234',
+          badge: '3',
+          text: 'hello',
+          time: '2 min',
+        },
+        {
+          username: 'mahdi',
+          id: '1234',
+          badge: '3',
+          text: 'hello',
+          time: '2 min',
+        },
+        {
+          username: 'mahdi',
+          id: '1234',
+          badge: '3',
+          text: 'hello',
+          time: '2 min',
+        },
+        {
+          username: 'mahdi',
+          id: '1234',
+          badge: '3',
+          text: 'hello',
+          time: '2 min',
+        },
       ],
     };
   },
@@ -150,10 +192,10 @@ export default {
   color: #2a304d;
 }
 .navbar-menu {
-  position: fixed;
   top: 0;
-  height: 9vh;
-  width: 100%;
+  height: 8vh;
+  max-width: 400px;
+  left: 0;
 }
 .chat-cards {
   position: fixed;
@@ -163,5 +205,17 @@ export default {
 }
 .body {
   height: 100vh;
+}
+.chat-cards::-webkit-scrollbar {
+  width: 5px;
+}
+.chat-cards::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.chat-cards::-webkit-scrollbar-thumb {
+  background: #888;
+}
+.chat-cards::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 </style>

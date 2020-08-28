@@ -3,7 +3,7 @@
     <b-navbar
       type="dark"
       fixed="top"
-      class="Nav-Dark p-2 pl-1 mb-3 pt-3 navbar top-bar"
+      class="Nav-Dark p-2 pl-1 mb-3 pt-3 nav-box"
     >
       <b-icon icon="arrow-left" font-scale="2" class="mr-2 icon-color"></b-icon>
       <b-navbar-nav>
@@ -20,24 +20,23 @@
         class="ml-auto icon-color"
       ></b-icon>
     </b-navbar>
-    <b-list-group
-      class="d-flex align-items-center Dark chat-box flex-fil pt-2 navbar"
-    >
-      <Messege />
-      <Messege type="Send" />
-      <Messege type="Send" />
-      <Messege />
-      <Messege type="Send" />
-      <Messege type="Send" />
-      <Messege />
-      <Messege type="Send" />
-      <Messege type="Send" />
-      <Messege type="Send" />
-      <Messege />
-      <Messege />
-    </b-list-group>
 
-    <b-navbar type="dark" class="Dark navbar bottom-bar" fixed="bottom">
+    <b-row class="Dark overflow-auto chat-box pt-2 navbar">
+      <Messege />
+      <Messege type="Send" />
+      <Messege type="Send" />
+      <Messege />
+      <Messege type="Send" />
+      <Messege type="Send" />
+      <Messege />
+      <Messege type="Send" />
+      <Messege type="Send" />
+      <Messege type="Send" />
+      <Messege />
+      <Messege />
+    </b-row>
+
+    <b-navbar type="dark" class="Dark input-box" fixed="bottom">
       <b-form-textarea
         v-model="text"
         size="sm"
@@ -79,10 +78,6 @@ export default {
 .Dark {
   background-color: #2a304d;
 }
-.DOM-title {
-  color: #f85252;
-  font-size: x-large;
-}
 .send-btn {
   width: 50px;
   padding: 0;
@@ -94,35 +89,46 @@ export default {
   background-color: transparent;
   border: 2px solid transparent;
 }
-
 .Text-Dark {
   color: #fff;
 }
 .Input-Dark {
-  padding-left: 15px;
-  border-radius: 10px;
   background-color: #32395d;
   color: #fff;
-}
-.chat-box {
-  position: fixed;
-  top: 9vh;
-  bottom: 9.2vh;
-  height: auto;
-  overflow-y: auto;
 }
 .body {
   height: 100vh;
 }
-.navbar {
-  width: calc(100% - 400px);
-  left: 400px;
+.nav-box {
+  height: 8vh;
   right: 0;
+  left: 400px;
 }
-.top-bar {
-  height: 9vh;
+.chat-box {
+  position: fixed;
+  top: 8vh;
+  bottom: 9.2vh;
+  height: auto;
+  right: 15px;
+  left: 415px;
 }
-.bottom-bar {
+.input-box {
+  padding-left: 15px;
+  border-radius: 10px;
   height: 9.2vh;
+  right: 0;
+  left: 400px;
+}
+.chat-box::-webkit-scrollbar {
+  width: 5px;
+}
+.chat-box::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.chat-box::-webkit-scrollbar-thumb {
+  background: #888;
+}
+.chat-box::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 </style>

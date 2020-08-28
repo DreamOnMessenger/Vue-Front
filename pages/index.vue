@@ -3,10 +3,10 @@
     <ChatsMenu />
     <ChatBox />
     <Login />
-    <b-sidebar id="profile" no-header shadow width="360px">
+    <b-sidebar id="profile" no-header width="360px">
       <Profile />
     </b-sidebar>
-    <b-sidebar id="setting" no-header shadow width="360px">
+    <b-sidebar id="setting" no-header width="360px">
       <Settings />
     </b-sidebar>
   </div>
