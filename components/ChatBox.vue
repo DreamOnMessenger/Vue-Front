@@ -69,11 +69,11 @@ export default {
 
 <style scoped>
 .icon-color {
-  color: #f85252;
+  color: #fa5a5a;
 }
 .Nav-Dark {
   background-color: #20253b;
-  border-bottom: 5px solid #f85252;
+  border-bottom: 5px solid #fa5a5a;
 }
 .Dark {
   background-color: #2a304d;
@@ -85,9 +85,19 @@ export default {
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
   transition: all 0.3;
-  color: #f85252;
+  color: #fa5a5a;
   background-color: transparent;
   border: 2px solid transparent;
+}
+.send-btn-active {
+  background-color: #fa5a5a;
+  color: #ffcc;
+  border: 2px solid #fa5a5a;
+}
+.send-btn-active:hover {
+  background-color: transparent;
+  color: #fa5a5a;
+  border: 2px solid #fa5a5a;
 }
 .Text-Dark {
   color: #fff;

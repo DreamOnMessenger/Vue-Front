@@ -59,7 +59,7 @@ export default {
 }
 .Dark:hover {
   background-color: #292f4c;
-  border-top: 3px solid #f85252;
+  border-top: 3px solid #fa5a5a;
 }
 .Text-Dark {
   color: #fff;

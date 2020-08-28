@@ -43,7 +43,7 @@
   height: 500px;
 }
 .login-btn {
-  background-color: #f85252;
+  background-color: #fa5a5a;
   color: beige;
   border-radius: 50px;
   transition: all 0.3;
@@ -51,16 +51,16 @@
 }
 .login-btn:hover {
   background-color: transparent;
-  color: #f85252;
+  color: #fa5a5a;
   border-radius: 50px;
   transition: all 0.3;
-  border: 1.5px solid #f85252;
+  border: 1.5px solid #fa5a5a;
 }
 .Text-Dark {
   color: #fff;
 }
 .register-btn {
-  color: #f85252;
+  color: #fa5a5a;
 }
 .register-btn:hover {
   color: #fff;

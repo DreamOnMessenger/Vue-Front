@@ -42,10 +42,10 @@ export default {
 .icon-color {
   border-radius: 5px;
   border: 2.5px solid transparent;
-  color: #f85252;
+  color: #fa5a5a;
 }
 .icon-color:hover {
-  background-color: #f85252;
+  background-color: #fa5a5a;
   color: #2a304d;
 }
 </style>

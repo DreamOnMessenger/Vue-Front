@@ -40,10 +40,10 @@
   background-color: #32395d;
 }
 .DOM-title {
-  color: #f85252;
+  color: #fa5a5a;
   font-size: x-large;
 }
 .icon-color {
-  color: #f85252;
+  color: #fa5a5a;
 }
 </style>

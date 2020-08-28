@@ -179,16 +179,16 @@ export default {
   background-color: #32395d;
 }
 .DOM-title {
-  color: #f85252;
+  color: #fa5a5a;
   font-size: x-large;
 }
 .icon-color {
   border-radius: 5px;
   border: 2.5px solid transparent;
-  color: #f85252;
+  color: #fa5a5a;
 }
 .icon-color:hover {
-  background-color: #f85252;
+  background-color: #fa5a5a;
   color: #2a304d;
 }
 .navbar-menu {
