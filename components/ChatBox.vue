@@ -34,6 +34,13 @@
       <Messege type="Send" />
       <Messege />
       <Messege />
+      <Messege />
+      <Messege type="Send" />
+      <Messege />
+      <Messege type="Send" />
+      <Messege />
+      <Messege type="Send" />
+      <Messege />
     </b-row>
 
     <b-navbar type="dark" class="Dark input-box" fixed="bottom">
