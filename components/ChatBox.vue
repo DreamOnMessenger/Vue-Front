@@ -1,5 +1,5 @@
 <template>
-  <div class="Dark body">
+  <div>
     <b-navbar
       type="dark"
       fixed="top"
@@ -41,7 +41,7 @@
         v-model="text"
         size="sm"
         placeholder="Message"
-        class="Input-Dark"
+        class="Input-Dark px-3"
       ></b-form-textarea>
       <b-icon
         icon="gem"
@@ -87,17 +87,17 @@ export default {
   transition: all 0.3;
   color: #fa5a5a;
   background-color: transparent;
-  border: 2px solid transparent;
+  border: 3px solid transparent;
 }
 .send-btn-active {
   background-color: #fa5a5a;
   color: #ffcc;
-  border: 2px solid #fa5a5a;
+  border: 3px solid #fa5a5a;
 }
 .send-btn-active:hover {
   background-color: transparent;
   color: #fa5a5a;
-  border: 2px solid #fa5a5a;
+  border: 3px solid #fa5a5a;
 }
 .Text-Dark {
   color: #fff;
@@ -105,14 +105,12 @@ export default {
 .Input-Dark {
   background-color: #32395d;
   color: #fff;
-}
-.body {
-  height: 100vh;
+  border-radius: 30px;
 }
 .nav-box {
   height: 8vh;
   right: 0;
-  left: 400px;
+  left: 360px;
 }
 .chat-box {
   position: fixed;
@@ -120,25 +118,25 @@ export default {
   bottom: 9.2vh;
   height: auto;
   right: 15px;
-  left: 415px;
+  left: 375px;
 }
 .input-box {
   padding-left: 15px;
   border-radius: 10px;
   height: 9.2vh;
   right: 0;
-  left: 400px;
+  left: 360px;
 }
 .chat-box::-webkit-scrollbar {
   width: 5px;
 }
 .chat-box::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-.chat-box::-webkit-scrollbar-thumb {
   background: #888;
 }
-.chat-box::-webkit-scrollbar-thumb:hover {
+.chat-box::-webkit-scrollbar-thumb {
   background: #555;
+}
+.chat-box::-webkit-scrollbar-thumb:hover {
+  background: #3f445e;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="Dark body" style="max-width: 400px;">
+  <div class="Dark body" style="max-width: 360px;">
     <b-navbar
       toggleable
       type="dark"
@@ -30,7 +30,7 @@
 
     <b-list-group
       class="Nav-Dark overflow-auto flex-fil chat-cards mt-0"
-      style="max-width: 400px;"
+      style="max-width: 360px;"
     >
       <ChatCard />
       <ChatCard
@@ -194,7 +194,7 @@ export default {
 .navbar-menu {
   top: 0;
   height: 8vh;
-  max-width: 400px;
+  max-width: 360px;
   left: 0;
 }
 .chat-cards {
@@ -210,12 +210,12 @@ export default {
   width: 5px;
 }
 .chat-cards::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-.chat-cards::-webkit-scrollbar-thumb {
   background: #888;
 }
-.chat-cards::-webkit-scrollbar-thumb:hover {
+.chat-cards::-webkit-scrollbar-thumb {
   background: #555;
+}
+.chat-cards::-webkit-scrollbar-thumb:hover {
+  background: #3f445e;
 }
 </style>

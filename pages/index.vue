@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="body Dark">
     <ChatsMenu />
     <ChatBox />
     <Login />
@@ -31,3 +31,15 @@ export default {
   },
 };
 </script>
+<style scoped>
+.body {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.Dark {
+  background-color: #32395d;
+}
+</style>
