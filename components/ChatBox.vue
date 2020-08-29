@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="body">
     <b-navbar
       type="dark"
       fixed="top"
@@ -75,6 +75,74 @@ export default {
 </script>
 
 <style scoped>
+@media (max-width: 700000px) {
+  .nav-box {
+    height: 8vh;
+    right: 19%;
+    left: 360px;
+  }
+  .chat-box {
+    position: fixed;
+    top: 8vh;
+    bottom: 9.2vh;
+    height: auto;
+    right: calc(19% + 15px);
+    left: 375px;
+  }
+  .input-box {
+    padding-left: 15px;
+    height: 9.2vh;
+    right: 19%;
+    left: 360px;
+  }
+}
+@media (max-width: 1200px) {
+  .nav-box {
+    height: 8vh;
+    right: 0;
+    left: 360px;
+  }
+  .chat-box {
+    position: fixed;
+    top: 8vh;
+    bottom: 9.2vh;
+    height: auto;
+    right: 15px;
+    left: 375px;
+  }
+  .input-box {
+    padding-left: 15px;
+    height: 9.2vh;
+    right: 0;
+    left: 360px;
+  }
+}
+@media (max-width: 720px) {
+  .nav-box {
+    height: 8vh;
+    right: 0;
+    left: 50%;
+  }
+  .chat-box {
+    position: fixed;
+    top: 8vh;
+    bottom: 9.2vh;
+    height: auto;
+    right: 15px;
+    left: calc(50% + 15px);
+  }
+  .input-box {
+    padding-left: 15px;
+    height: 9.2vh;
+    right: 0;
+    left: 50%;
+  }
+}
+@media (max-width: 600px) {
+  .body {
+    display: none;
+  }
+}
 .icon-color {
   color: #fa5a5a;
 }
@@ -113,26 +181,6 @@ export default {
   background-color: #32395d;
   color: #fff;
   border-radius: 30px;
-}
-.nav-box {
-  height: 8vh;
-  right: 0;
-  left: 360px;
-}
-.chat-box {
-  position: fixed;
-  top: 8vh;
-  bottom: 9.2vh;
-  height: auto;
-  right: 15px;
-  left: 375px;
-}
-.input-box {
-  padding-left: 15px;
-  border-radius: 10px;
-  height: 9.2vh;
-  right: 0;
-  left: 360px;
 }
 .chat-box::-webkit-scrollbar {
   width: 5px;

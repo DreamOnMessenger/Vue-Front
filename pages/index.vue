@@ -2,6 +2,7 @@
   <div class="body Dark">
     <ChatsMenu />
     <ChatBox />
+    <ChatInfo />
     <Login />
     <b-sidebar id="profile" no-header width="360px">
       <Profile />
@@ -18,8 +19,9 @@ import ChatsMenu from '~/components/ChatsMenu.vue';
 import Login from '~/components/Login.vue';
 import Profile from '~/components/Profile.vue';
 import Settings from '~/components/Settings.vue';
+import ChatInfo from '~/components/ChatInfo.vue';
 export default {
-  components: { ChatBox, ChatsMenu, Login, Profile, Settings },
+  components: { ChatBox, ChatsMenu, Login, Profile, Settings, ChatInfo },
   data() {
     return {
       chatmenu: true,
