@@ -138,10 +138,13 @@ export default {
     left: 50%;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 660px) {
   .body {
     display: none;
   }
+}
+.body {
+  z-index: -1;
 }
 .icon-color {
   color: #fa5a5a;

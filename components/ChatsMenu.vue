@@ -1,5 +1,5 @@
 <template>
-  <div class="Dark body" style="max-width: 360px;">
+  <div class="Dark body">
     <b-navbar
       toggleable
       type="dark"
@@ -28,10 +28,7 @@
       </b-collapse>
     </b-navbar>
 
-    <b-list-group
-      class="Nav-Dark overflow-auto flex-fil chat-cards mt-0"
-      style="max-width: 360px;"
-    >
+    <b-list-group class="Nav-Dark overflow-auto flex-fil chat-cards mt-0">
       <ChatCard />
       <ChatCard
         v-for="chat in chats"
@@ -172,6 +169,57 @@ export default {
 </script>
 
 <style scoped>
+@media (max-width: 700000px) {
+  .body {
+    width: 360px;
+  }
+  .navbar-menu {
+    top: 0;
+    height: 8vh;
+    width: 360px;
+    left: 0;
+  }
+  .chat-cards {
+    position: fixed;
+    top: 8.5vh;
+    height: 91vh;
+    width: 360px;
+  }
+}
+@media (max-width: 720px) {
+  .body {
+    width: 50%;
+  }
+  .navbar-menu {
+    top: 0;
+    height: 8vh;
+    width: 50%;
+    left: 0;
+  }
+  .chat-cards {
+    position: fixed;
+    top: 8.5vh;
+    height: 91vh;
+    width: 50%;
+  }
+}
+@media (max-width: 660px) {
+  .body {
+    width: 100%;
+  }
+  .navbar-menu {
+    top: 0;
+    height: 8vh;
+    width: 100%;
+    left: 0;
+  }
+  .chat-cards {
+    position: fixed;
+    top: 8.5vh;
+    height: 91vh;
+    width: 100%;
+  }
+}
 .Nav-Dark {
   background-color: #2a304d;
 }
@@ -190,18 +238,6 @@ export default {
 .icon-color:hover {
   background-color: #fa5a5a;
   color: #2a304d;
-}
-.navbar-menu {
-  top: 0;
-  height: 8vh;
-  max-width: 360px;
-  left: 0;
-}
-.chat-cards {
-  position: fixed;
-  top: 9vh;
-  height: 91vh;
-  width: 100%;
 }
 .body {
   height: 100vh;
