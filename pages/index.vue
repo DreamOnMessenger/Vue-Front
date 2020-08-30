@@ -1,12 +1,13 @@
 <template>
-  <div>
+  <div class="body Dark">
     <ChatsMenu />
     <ChatBox />
+    <ChatInfo />
     <Login />
-    <b-sidebar id="profile" no-header shadow width="360px">
+    <b-sidebar id="profile" no-header width="360px">
       <Profile />
     </b-sidebar>
-    <b-sidebar id="setting" no-header shadow width="360px">
+    <b-sidebar id="setting" no-header width="360px">
       <Settings />
     </b-sidebar>
   </div>
@@ -18,8 +19,9 @@ import ChatsMenu from '~/components/ChatsMenu.vue';
 import Login from '~/components/Login.vue';
 import Profile from '~/components/Profile.vue';
 import Settings from '~/components/Settings.vue';
+import ChatInfo from '~/components/ChatInfo.vue';
 export default {
-  components: { ChatBox, ChatsMenu, Login, Profile, Settings },
+  components: { ChatBox, ChatsMenu, Login, Profile, Settings, ChatInfo },
   data() {
     return {
       chatmenu: true,
@@ -31,3 +33,15 @@ export default {
   },
 };
 </script>
+<style scoped>
+.body {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.Dark {
+  background-color: #32395d;
+}
+</style>

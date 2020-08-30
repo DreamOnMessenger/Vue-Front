@@ -1,22 +1,10 @@
 <template>
   <div>
     <b-list-group-item class="d-flex align-items-center Dark p-2 pr-3">
-      <b-avatar
-        size="lg"
-        :badge="badge"
-        badge-variant="danger"
-        :src="imgURL"
-        class="mr-3"
-      ></b-avatar>
+      <b-avatar size="2rem" :src="imgURL" class="mr-3"></b-avatar>
       <b-col>
-        <b-row>
-          <h5 class="mr-auto Text-Dark">{{ username }}</h5>
-        </b-row>
-        <b-row>
-          <span class="mr-auto Text-Dark">{{ text }}</span>
-        </b-row>
+        <h5 class="mr-auto Text-Dark">{{ username }}</h5>
       </b-col>
-      <span class="mr-auto Text-Dark">{{ time }}</span>
     </b-list-group-item>
   </div>
 </template>
@@ -36,10 +24,6 @@ export default {
       type: String,
       default: 'hello world',
     },
-    badge: {
-      type: String,
-      default: '10',
-    },
     imgURL: {
       type: String,
       default: 'https://i.pravatar.cc/300',
@@ -55,6 +39,7 @@ export default {
 <style scoped>
 .Dark {
   background-color: #32395d;
+  border: 0;
   border-top: 3px solid transparent;
 }
 .Dark:hover {

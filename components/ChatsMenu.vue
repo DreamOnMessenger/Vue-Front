@@ -1,34 +1,11 @@
 <template>
-  <div class="Dark body" style="max-width: 400px;">
-    <!-- 
-
-    <b-list-group-item
-      class="d-flex align-items-center Nav-Dark p-0 pl-2 navbar-menu"
-      style="max-width: 400px;"
-    >
-      
-      <div class="DOM-title mb-2 mt-2 mr-auto"></div>
-      <b-icon
-        
-        icon="list"
-        
-        class="mr-auto icon-color ml-4"
-      ></b-icon>
-    </b-list-group-item>
-    <b-collapse
-      id="ToolBox"
-      class="Nav-Dark navbar-menu"
-      style="max-width: 400px;"
-    >
-      
-    </b-collapse> -->
-
+  <div class="Dark body">
     <b-navbar
       toggleable
       type="dark"
       is-nav
-      sticky="true"
-      class="d-flex align-items-center Nav-Dark p-0 pl-2"
+      fixed="top"
+      class="d-flex align-items-center Nav-Dark p-0 pl-2 navbar-menu mb-0"
     >
       <b-avatar
         size="2rem"
@@ -51,10 +28,7 @@
       </b-collapse>
     </b-navbar>
 
-    <b-list-group
-      class="Nav-Dark overflow-auto flex-fil chat-cards"
-      style="max-width: 400px;"
-    >
+    <b-list-group class="Nav-Dark overflow-auto flex-fil chat-cards mt-0">
       <ChatCard />
       <ChatCard
         v-for="chat in chats"
@@ -146,6 +120,48 @@ export default {
           text: 'hello',
           time: '2 min',
         },
+        {
+          username: 'mahdi',
+          id: '1234',
+          badge: '3',
+          text: 'hello',
+          time: '2 min',
+        },
+        {
+          username: 'mahdi',
+          id: '1234',
+          badge: '3',
+          text: 'hello',
+          time: '2 min',
+        },
+        {
+          username: 'mahdi',
+          id: '1234',
+          badge: '3',
+          text: 'hello',
+          time: '2 min',
+        },
+        {
+          username: 'mahdi',
+          id: '1234',
+          badge: '3',
+          text: 'hello',
+          time: '2 min',
+        },
+        {
+          username: 'mahdi',
+          id: '1234',
+          badge: '3',
+          text: 'hello',
+          time: '2 min',
+        },
+        {
+          username: 'mahdi',
+          id: '1234',
+          badge: '3',
+          text: 'hello',
+          time: '2 min',
+        },
       ],
     };
   },
@@ -153,6 +169,57 @@ export default {
 </script>
 
 <style scoped>
+@media (max-width: 700000px) {
+  .body {
+    width: 360px;
+  }
+  .navbar-menu {
+    top: 0;
+    height: 8vh;
+    width: 360px;
+    left: 0;
+  }
+  .chat-cards {
+    position: fixed;
+    top: 8.5vh;
+    height: 91vh;
+    width: 360px;
+  }
+}
+@media (max-width: 720px) {
+  .body {
+    width: 50%;
+  }
+  .navbar-menu {
+    top: 0;
+    height: 8vh;
+    width: 50%;
+    left: 0;
+  }
+  .chat-cards {
+    position: fixed;
+    top: 8.5vh;
+    height: 91vh;
+    width: 50%;
+  }
+}
+@media (max-width: 660px) {
+  .body {
+    width: 100%;
+  }
+  .navbar-menu {
+    top: 0;
+    height: 8vh;
+    width: 100%;
+    left: 0;
+  }
+  .chat-cards {
+    position: fixed;
+    top: 8.5vh;
+    height: 91vh;
+    width: 100%;
+  }
+}
 .Nav-Dark {
   background-color: #2a304d;
 }
@@ -160,31 +227,31 @@ export default {
   background-color: #32395d;
 }
 .DOM-title {
-  color: #f85252;
+  color: #fa5a5a;
   font-size: x-large;
 }
 .icon-color {
   border-radius: 5px;
   border: 2.5px solid transparent;
-  color: #f85252;
+  color: #fa5a5a;
 }
 .icon-color:hover {
-  background-color: #f85252;
+  background-color: #fa5a5a;
   color: #2a304d;
-}
-.navbar-menu {
-  position: fixed;
-  top: 0;
-  height: 9vh;
-  width: 100%;
-}
-.chat-cards {
-  position: fixed;
-  top: 9vh;
-  height: 91vh;
-  width: 100%;
 }
 .body {
   height: 100vh;
+}
+.chat-cards::-webkit-scrollbar {
+  width: 5px;
+}
+.chat-cards::-webkit-scrollbar-track {
+  background: #888;
+}
+.chat-cards::-webkit-scrollbar-thumb {
+  background: #555;
+}
+.chat-cards::-webkit-scrollbar-thumb:hover {
+  background: #3f445e;
 }
 </style>
