@@ -53,7 +53,12 @@ export default {
    */
   modules: [
     // Doc: https://bootstrap-vue.js.org
-    'bootstrap-vue/nuxt',
+    [
+      'bootstrap-vue/nuxt',
+      {
+        icons: true,
+      },
+    ],
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
@@ -75,4 +80,4 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
-}
+};

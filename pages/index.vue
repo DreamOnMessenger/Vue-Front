@@ -1,67 +1,47 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        Dreamonmessenger
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div class="body Dark">
+    <ChatsMenu />
+    <ChatBox />
+    <ChatInfo />
+    <Login />
+    <b-sidebar id="profile" no-header width="360px">
+      <Profile />
+    </b-sidebar>
+    <b-sidebar id="setting" no-header width="360px">
+      <Settings />
+    </b-sidebar>
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({})
+<script>
+import ChatBox from '~/components/ChatBox.vue';
+import ChatsMenu from '~/components/ChatsMenu.vue';
+import Login from '~/components/Login.vue';
+import Profile from '~/components/Profile.vue';
+import Settings from '~/components/Settings.vue';
+import ChatInfo from '~/components/ChatInfo.vue';
+export default {
+  components: { ChatBox, ChatsMenu, Login, Profile, Settings, ChatInfo },
+  data() {
+    return {
+      chatmenu: true,
+      profile: false,
+      setting: false,
+      login: false,
+      chatbox: false,
+    };
+  },
+};
 </script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+<style scoped>
+.body {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.Dark {
+  background-color: #32395d;
 }
 </style>
