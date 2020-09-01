@@ -10,6 +10,7 @@
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
     "lint": "npm run lint:js && npm run lint:style",
+		"format": "prettier-eslint --eslint-config-path ./.eslintrc.js --write '**/*.js'",
     "test": "jest"
   },
   "lint-staged": {
