@@ -1,10 +1,32 @@
 <template>
-  <div>
+  <div class="">
+    <!--<ChatsMenu />
+
+    <ProviderModal />
+		-->
+
     <Nuxt />
-  </div>
+
+    <!-- <b-sidebar id="profile" no-header width=360px">
+			<Profile />
+		</b-sidebar>
+		<b-sidebar id="setting" no-header width="360px">
+			<Settings />
+		</b-sidebar>
+		--></div>
 </template>
 
-<style>
+<script>
+/* import ChatsMenu from '~/components/ChatsMenu.vue'; */
+/* import Profile from '~/components/Profile.vue'; */
+/* import Settings from '~/components/Settings.vue'; */
+
+export default {
+  /* components: { ChatsMenu }, */
+};
+</script>
+
+<style scoped>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -51,5 +73,15 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+.body {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.Dark {
+  background-color: #32395d;
 }
 </style>
